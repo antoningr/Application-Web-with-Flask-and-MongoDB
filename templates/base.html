@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Application Web Flask</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1 style="text-align:center;">Application Web avec Flask et MongoDB : Championnat de France de football (Ligue 1)</h1>
+    <h2 style="text-align:center;">Projet Data Engineering</h2>
+    <hr>
+    <h2>Le menu de l'application Web</h2>
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('index') }}">Accueil</a></li>
+            <li><a href="{{ url_for('search') }}">Moteur de recherche</a></li>
+            <li><a href="{{ url_for('visualize') }}">Visualisation des données</a></li>
+        </ul>
+    </nav>
+    <hr>
+    {% block content %}
+
+    {% endblock %}
+</body>
+</html>

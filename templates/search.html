@@ -1,0 +1,39 @@
+{% extends 'base.html' %} 
+
+{% block content %}
+
+<h2>Bienvenue dans le moteur de recherche de l'application web !</h2>
+<h4>Rechercher des informations sur les clubs ayant déjà particpé au championat de France de football (Ligue 1) dans la base de données MongoDB.</h4>
+	<form method="POST" action="{{ url_for('search') }}">
+		<label for="query">Enter un nom de club de football (ne rien entrer pour tout afficher) :</label>
+		<input type="text" name="query" id="query">
+		<input type="submit" value="Rechercher">
+
+		<!-- Bouton filtre pour afficher seulement le nombre de matchs joués pour l'équipe recherchée -->
+	    <input type="checkbox" name="match_played_only" id="match_played_only">
+        <label for="match_played_only">Matchs joués uniquement</label>
+		<!-- Bouton filtre pour afficher seulement le nombre de Buts marqués pour l'équipe recherchée -->
+		<input type="checkbox" name="goal_scored_only" id="goal_scored_only">
+		<label for="goal_scored_only">Buts marqués uniquement</label>
+		<!-- Bouton filtre pour afficher seulement la position de l'équipe recherchée -->
+		<input type="checkbox" name="position_only" id="position_only">
+		<label for="position_only">Position uniquement</label>
+		<!-- Bouton filtre pour tri croissant -->
+		<input type="checkbox" name="tri_croissant" id="tri_croissant">
+		<label for="tri_croissant">Tri croissant</label>
+		<!-- Bouton filtre pour tri décroissant -->
+		<input type="checkbox" name="tri_decroissant" id="tri_decroissant">
+		<label for="tri_decroissant">Tri décroissant</label>
+	   
+	</form>
+	{% if results %}
+		<h4>Voici les résultats :</h4>
+		<ul>
+		{% for result in results.split('\n') %} <!-- split('\n') permet de séparer les attributs ligne par ligne -->
+			<li>{{ result }}</li>
+		{% endfor %}
+		</ul>
+	{% endif %}
+
+{% endblock %}
+

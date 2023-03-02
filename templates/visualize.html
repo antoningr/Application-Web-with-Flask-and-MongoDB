@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  
+<h2>Bienvenue dans visualisation des données de l'application web !</p>
+<h4>Visualisation des données sur championat de France de football (Ligue 1) à partir des données dans la base de données MongoDB.</h4>
+      
+  <style>
+    .image-container {
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 100%;
+      justify-content: center;
+      margin: 60px;
+    }
+    .image-container img {
+      margin: 60px;
+    }
+  </style>
+  </head>
+  <body>
+    <div class="image-container">
+      <img src="{{ url_for('static', filename='graph1.png') }}" />
+      <img src="{{ url_for('static', filename='graph2.png') }}" />
+      <img src="{{ url_for('static', filename='graph3.png') }}" />
+      <img src="{{ url_for('static', filename='graph4.png') }}" />
+      <img src="{{ url_for('static', filename='graph5.png') }}" />
+    </div>
+  </ul>
+    
+{% endblock %}
