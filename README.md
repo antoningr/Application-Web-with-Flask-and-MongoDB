@@ -121,7 +121,7 @@ L'utilisateur peut maintenant naviguer entre les différentes pages et fonctionn
 ## Fonctionnalités de l'application web
 
 ### Page d'accueil de l'application
-La page d'accueil de l'application web est la première page que l'l'utilisateur voit lorsqu'il ouvre l'application. Elle sert à présenter brièvement les fonctionnalités de l'application et à orienter l'utilisateur vers les différentes sections de l'application.
+La page d'accueil de l'application web est la première page que l'utilisateur voit lorsqu'il ouvre l'application. Elle sert à présenter brièvement les fonctionnalités de l'application et à orienter l'utilisateur vers les différentes sections de l'application.
 
 La page d'accueil de l'application web permet d'introduire l'application et de présenter les données sur le championnat de France de football, toutes saisons confondues depuis sa création en 1932 jusqu'à aujourd'hui.
 
